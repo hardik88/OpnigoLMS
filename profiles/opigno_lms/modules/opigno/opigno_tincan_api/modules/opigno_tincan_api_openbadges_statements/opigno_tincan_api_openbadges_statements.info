@@ -1,0 +1,14 @@
+name = Opigno TinCan API / Mozilla Openbadges addon
+description = Add openbadges statements
+package = Opigno
+core = 7.x
+
+dependencies[] = opigno_tincan_api
+dependencies[] = opigno_mozilla_openbadges_app
+
+
+; Information added by drush on 2016-05-06
+version = ""
+project = "opigno_tincan_api"
+datestamp = "1462549825"
+

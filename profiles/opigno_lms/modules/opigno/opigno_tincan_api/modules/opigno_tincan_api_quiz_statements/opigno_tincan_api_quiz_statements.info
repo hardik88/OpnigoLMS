@@ -1,0 +1,14 @@
+name = Opigno TinCan API / Quiz addon
+description = Add Quiz statements
+package = Opigno
+core = 7.x
+
+dependencies[] = opigno_tincan_api
+dependencies[] = quiz
+
+
+; Information added by drush on 2016-05-06
+version = ""
+project = "opigno_tincan_api"
+datestamp = "1462549825"
+

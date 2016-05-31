@@ -1,0 +1,14 @@
+name = Quiz File upload
+package = Quiz Question
+description = Fileupload question type for quiz.
+core = 7.x
+dependencies[] = quiz
+dependencies[] = quiz_question
+files[] = quizfileupload.classes.inc
+
+; Information added by drush on 2016-05-06
+version = "7.x-4.0+1-dev"
+core = "7.x"
+project = "quizfileupload"
+datestamp = "1462549805"
+

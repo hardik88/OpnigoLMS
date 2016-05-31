@@ -1,0 +1,5 @@
+name = Custom Module
+description = Provides functionality specific to the Campdeerwood website.
+core = 7.x
+package = Custom Drupal
+version = 7.x-1.0

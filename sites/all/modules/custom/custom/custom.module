@@ -1,0 +1,54 @@
+<?php
+
+/**
+ * @file
+ * Provides functionality specific to the campdeerwood website.
+ *
+ * 
+ */
+/**
+ * Implements hook_form_alter().
+ * Alters the form.
+ */
+function custom_form_alter(&$form, &$form_state, $form_id) {
+	if($form_id == 'user_login'){
+		//echo "<pre>";print_r($form);die;
+		$form['name'] = array(
+		'#type' => 'textfield',
+        '#title_hidden' => TRUE,
+        '#attributes' => array(
+          'class' => array(
+              'form-control'
+          ),
+          'placeholder' => array(
+              'User Name'
+          ),
+        ),
+        '#required' => 1,
+        '#description' => '',
+	   );
+	   $form['pass'] = array(
+      '#type' => 'password',
+      '#title_hidden' => TRUE,
+      '#attributes' => array(
+          'class' => array(
+              'form-control'
+          ),
+          'placeholder' => array(
+              'Password'
+          ),
+      ),
+      '#required' => 1,
+      '#description' => '',
+  );
+  $form['actions']['submit']['#attributes']['class'][] = 'btn btn-default btn-border';
+  $form['actions']['submit']['#prefix'] = '<div class="extra_div">';
+  $form['actions']['submit']['#suffix'] = '</div>';
+  $markup = l(t('Forgot your password?'), 'user/password', array('attributes' => array('title' => t('Request new password via e-mail.'), 'class' => 'forgot-pwd')));
+  if (variable_get('user_register', USER_REGISTER_VISITORS_ADMINISTRATIVE_APPROVAL)) {
+    $markup .= ' ' . l(t(''), 'user/register', array('attributes' => array('title' => t('Create a new user account.'), 'class' => 'register-link')));
+  }
+  $markup = '<div class="clearfix forgetpass">' . $markup . '</div>';
+  $form['links']['#markup'] = $markup;
+	}
+}

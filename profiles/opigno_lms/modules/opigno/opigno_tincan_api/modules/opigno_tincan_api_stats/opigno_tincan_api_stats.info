@@ -1,0 +1,13 @@
+name = Opigno TinCan API / LRS Stats Pages
+description = Add statistics pages based on Learning Record Store statements for opigno
+package = Opigno
+core = 7.x
+
+dependencies[] = opigno_tincan_api
+
+
+; Information added by drush on 2016-05-06
+version = ""
+project = "opigno_tincan_api"
+datestamp = "1462549825"
+
